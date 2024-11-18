@@ -1,12 +1,12 @@
 ﻿namespace MusicRecordREST.Models
 {
-    public class RepositoryList
+    public class MusicRecordRepositoryList
     {
         private static int _nextId = 1;
         private static readonly List<MusicRecord> _musicRecords = new();
 
 
-        public RepositoryList()
+        public MusicRecordRepositoryList()
         {
 
             _musicRecords.Add(new MusicRecord { Id = _nextId++, Title = "The Dark Side of the Moon", Artist = "Pink Floyd", Duration = 43, PublicationYear = 1973 });

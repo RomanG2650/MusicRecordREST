@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MusicRecordREST.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,11 +9,18 @@ namespace MusicRecordREST.Controllers
     [ApiController]
     public class MusicRecordsController : ControllerBase
     {
+        private readonly MusicRecordRepositoryList _musicRecords;
+
+        public MusicRecordsController(MusicRecordRepositoryList recordsRepositoryList)
+        {
+            _musicRecords = recordsRepositoryList;
+        }
         // GET: api/<ValuesController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public ActionResult<IEnumerable<MusicRecord>> Get()
         {
-            return new string[] { "value1", "value2" };
+            List<MusicRecord> list = _musicRecords.GetAll();
+            return Ok(list);
         }
 
         // GET api/<ValuesController>/5
