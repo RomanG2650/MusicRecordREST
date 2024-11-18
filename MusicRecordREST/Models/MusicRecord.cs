@@ -11,9 +11,9 @@
 
         public void ValidateYear()
         {
-            if (PublicationYear == null)
+            if (PublicationYear == 0)
             {
-                throw new ArgumentNullException("publication year cannot be null");
+                throw new ArgumentOutOfRangeException("publication year cannot be null");
             }
 
         }
