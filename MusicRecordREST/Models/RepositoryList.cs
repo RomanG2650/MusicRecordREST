@@ -15,6 +15,7 @@
             _musicRecords.Add(new MusicRecord { Id = _nextId++, Title = "Bat Out of Hell", Artist = "Meat Loaf", Duration = 46, PublicationYear = 1977 });
             _musicRecords.Add(new MusicRecord { Id = _nextId++, Title = "Their Greatest Hits (1971-1975)", Artist = "Eagles", Duration = 43, PublicationYear = 1976 });
             _musicRecords.Add(new MusicRecord { Id = _nextId++, Title = "Saturday Night Fever", Artist = "Bee Gees", Duration = 75, PublicationYear = 1977 });
+            _musicRecords.Add(new MusicRecord { Id = _nextId++, Title = "Rumours", Artist = "Fleetwood Mac", Duration = 40, PublicationYear = 1977 });
 
         }
         public List<MusicRecord> GetAll()
