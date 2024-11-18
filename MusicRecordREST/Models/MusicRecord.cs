@@ -10,9 +10,9 @@
 
         public void ValidateYear()
         {
-            if (PublicationYear == 0)
+            if (PublicationYear == null)
             {
-
+                throw new ArgumentNullException("publication year cannot be null");
             }
 
         }
