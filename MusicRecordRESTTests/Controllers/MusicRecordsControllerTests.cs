@@ -15,10 +15,11 @@ namespace MusicRecordREST.Controllers.Tests
         [TestMethod()]  
         public void GetTest()
         {
+            //Arrange
             MusicRecordRepositoryList recordsRepositoryList = new MusicRecordRepositoryList();
-
-           var list = recordsRepositoryList.GetAll();
-
+            //Act
+            var list = recordsRepositoryList.GetAll();
+            //Assert
             Assert.AreEqual(7, list.Count);
 
 
